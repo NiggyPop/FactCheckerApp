@@ -8,7 +8,7 @@
 	<string>FactCheck Pro uses speech recognition to convert spoken words into text for fact-checking analysis</string>
 	<key>NSUserNotificationsUsageDescription</key>
 	<string>FactCheck Pro sends notifications about fact-check results and important updates</string>
-	<key>LSApplicationCategoryType</key>
-	<string>public.app-category.news&lt;</string>
+        <key>LSApplicationCategoryType</key>
+        <string>public.app-category.news</string>
 </dict>
 </plist>
