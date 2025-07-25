@@ -1,5 +1,5 @@
 //
-//  FactCheckProUITests.swift
+//  FactCheckerAppUITests.swift
 //  FactCheckerApp
 //
 //  Created by Nicholas Myer on 7/25/25.
@@ -8,7 +8,7 @@
 
 import XCTest
 
-class FactCheckProUITests: XCTestCase {
+class FactCheckerAppUITests: XCTestCase {
     var app: XCUIApplication!
     
     override func setUpWithError() throws {
