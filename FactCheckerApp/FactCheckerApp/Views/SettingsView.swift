@@ -464,6 +464,7 @@ enum SupportedLanguage: String, CaseIterable {
     case portuguese = "pt-BR"
     case chinese = "zh-CN"
     case japanese = "ja-JP"
+    case russian = "ru-RU"
     
     var displayName: String {
         switch self {
@@ -475,6 +476,7 @@ enum SupportedLanguage: String, CaseIterable {
         case .portuguese: return "Portuguese"
         case .chinese: return "Chinese"
         case .japanese: return "Japanese"
+        case .russian: return "Russian"
         }
     }
 }

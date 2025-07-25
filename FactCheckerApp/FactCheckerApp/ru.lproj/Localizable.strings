@@ -1,0 +1,204 @@
+/* General */
+"app_name" = "Factcheck Pro";
+"ok" = "ХОРОШО";
+"cancel" = "Отмена";
+"done" = "Сделанный";
+"save" = "Сохранять";
+"delete" = "Удалить";
+"edit" = "Редактировать";
+"back" = "Назад";
+"next" = "Следующий";
+"continue" = "Продолжать";
+"retry" = "Повторно";
+
+/* Main Interface */
+"start_listening" = "Начните слушать";
+"stop_listening" = "Перестань слушать";
+"ready_to_factcheck" = "Готов к проверке фактов";
+"listening" = "Слушание ...";
+"processing" = "Обработка...";
+"fact_checking" = "Проверка фактов ...";
+
+/* Fact Check Results */
+"statement_true" = "Истинный";
+"statement_false" = "ЛОЖЬ";
+"statement_mixed" = "Смешанный";
+"statement_unknown" = "Неизвестный";
+"confidence" = "Уверенность";
+"sources" = "Источники";
+"processing_time" = "Время обработки";
+"claim_type" = "Тип претензии";
+
+/* Navigation */
+"tab_factcheck" = "Проверка фактов";
+"tab_history" = "История";
+"tab_statistics" = "Статистика";
+"tab_speakers" = "Докладчики";
+"tab_settings" = "Настройки";
+
+/* History */
+"history_title" = "История";
+"search_history" = "История поиска ...";
+"filter_results" = "Фильтр";
+"no_results" = "Результаты не обнаружены";
+"clear_history" = "Ясная история";
+"export_history" = "История экспорта";
+
+/* Statistics */
+"statistics_title" = "Статистика";
+"total_checks" = "Общие чеки";
+"accuracy_rate" = "Скорость точности";
+"average_confidence" = "Средняя уверенность";
+"verification_rate" = "Скорость проверки";
+"timeframe_today" = "Сегодня";
+"timeframe_week" = "На этой неделе";
+"timeframe_month" = "В этом месяце";
+"timeframe_year" = "В этом году";
+"timeframe_all" = "Все время";
+
+/* Speakers */
+"speakers_title" = "Докладчики";
+"add_speaker" = "Добавить динамик";
+"speaker_name" = "Название спикера";
+"voice_sample" = "Образец голоса";
+"record_sample" = "Запись образец";
+"unknown_speaker" = "Неизвестный оратор";
+
+/* Settings */
+"settings_title" = "Настройки";
+"general" = "Общий";
+"theme" = "Тема";
+"theme_system" = "Система";
+"theme_light" = "Свет";
+"theme_dark" = "Темный";
+"haptic_feedback" = "Хаптическая обратная связь";
+"notifications" = "Уведомления";
+
+"factchecking" = "Проверка фактов";
+"realtime_factchecking" = "Проверка фактов в реальном времени";
+"confidence_threshold" = "Порог уверенности";
+"source_verification" = "Проверка источника";
+"max_sources" = "Максимальные источники за чек";
+
+"audio_speech" = "Аудио и речь";
+"speaker_identification" = "Идентификация спикера";
+"audio_sensitivity" = "Аудио чувствительность";
+"language" = "Язык";
+"continuous_listening" = "Непрерывное слушание";
+
+"privacy_security" = "Конфиденциальность и безопасность";
+"anonymous_analytics" = "Анонимная аналитика";
+"store_audio_locally" = "Хранить аудио на местном уровне";
+"privacy_policy" = "политика конфиденциальности";
+"data_retention" = "Удержание данных";
+
+"data_management" = "Управление данными";
+"storage_used" = "Хранилище используется";
+"export_data" = "Экспортные данные";
+"clear_cache" = "Чистый кеш";
+"reset_all_data" = "Сбросить все данные";
+
+"about" = "О";
+"version" = "Версия";
+"rate_app" = "Оценка приложения";
+"contact_support" = "Контактная поддержка";
+
+/* Onboarding */
+"onboarding_welcome_title" = "Проверка фактов в реальном времени";
+"onboarding_welcome_description" = "Автоматически проверяйте операторы, как они говорят, используя расширенный ИИ и несколько надежных источников.";
+
+"onboarding_speakers_title" = "Идентификация спикера";
+"onboarding_speakers_description" = "Определите разные ораторы и отслеживайте их историю проверки фактов с течением времени.";
+
+"onboarding_analytics_title" = "Подробная аналитика";
+"onboarding_analytics_description" = "Просмотреть комплексную статистику о показателях точности, типах претензий и тенденциях проверки.";
+
+"onboarding_privacy_title" = "Конфиденциальность сначала";
+"onboarding_privacy_description" = "Ваши данные остаются на вашем устройстве. ";
+
+"get_started" = "Начните";
+"permissions_required" = "Требуются разрешения";
+"permissions_description" = "FactCheck Pro нуждается в этих разрешениях для правильной работы";
+
+"microphone_access" = "Доступ к микрофону";
+"microphone_description" = "Требуется слушать и транскрибировать речь";
+"speech_recognition" = "Распознавание речи";
+"speech_recognition_description" = "Преобразует речь в текст для проверки фактов";
+"notifications_permission" = "Уведомления";
+"notifications_description" = "Получите оповещения о результатах проверки фактов";
+
+"allow" = "Позволять";
+"settings" = "Настройки";
+
+/* Errors */
+"error_title" = "Ошибка";
+"error_microphone_permission" = "Для проверки фактов требуется разрешение на микрофон";
+"error_speech_recognition" = "Распознавание речи недоступно";
+"error_network" = "Сетевое соединение, необходимое для проверки фактов";
+"error_processing" = "Оператор обработки ошибок";
+"error_no_statement" = "Заявление не обнаружено";
+"error_statement_too_short" = "Заявление слишком короткое, чтобы проверить факты";
+"error_statement_too_long" = "Заявление слишком долго, чтобы обработать";
+
+/* Accessibility */
+"accessibility_start_listening" = "Начните слушать речь к проверке фактов";
+"accessibility_stop_listening" = "Прекратите слушать речь";
+"accessibility_fact_result" = "Результат проверки фактов";
+"accessibility_confidence_level" = "Уровень уверенности";
+"accessibility_source_count" = "Количество источников";
+"accessibility_speaker_identified" = "Спикер идентифицирован";
+
+/* Data Retention */
+"retention_1week" = "1 неделя";
+"retention_1month" = "1 месяц";
+"retention_3months" = "3 месяца";
+"retention_6months" = "6 месяцев";
+"retention_1year" = "1 год";
+"retention_forever" = "Навсегда";
+
+/* Languages */
+"language_english" = "Английский";
+"language_spanish" = "испанский";
+"language_french" = "Французский";
+"language_german" = "немецкий";
+"language_italian" = "Итальянский";
+"language_portuguese" = "португальский";
+"language_chinese" = "китайский";
+"language_japanese" = "Японский";
+
+/* Claim Types */
+"claim_factual" = "Фактический";
+"claim_statistical" = "Статистический";
+"claim_quote" = "Цитировать";
+"claim_prediction" = "Прогноз";
+"claim_opinion" = "Мнение";
+
+/* Export */
+"export_format" = "Формат экспорта";
+"export_csv" = "CSV";
+"export_json" = "Json";
+"export_pdf" = "PDF";
+"export_success" = "Данные успешно экспортировались";
+"export_error" = "Ошибка экспорта данных";
+
+/* Alerts */
+"alert_clear_history_title" = "Ясная история";
+"alert_clear_history_message" = "Это навсегда удалит всю историю проверки фактов. ";
+"alert_reset_data_title" = "Сбросить все данные";
+"alert_reset_data_message" = "Это навсегда удалит всю историю проверки фактов, докладчики и настройки. ";
+"alert_delete_speaker_title" = "Удалить динамик";
+"alert_delete_speaker_message" = "Вы уверены, что хотите удалить этот профиль динамика?";
+
+/* Voice Samples */
+"record_voice_sample" = "Запись голосового образца";
+"recording_voice_sample" = "Запись ...";
+"voice_sample_recorded" = "Образец голоса записан";
+"voice_sample_too_short" = "Образец голоса слишком короткий. ";
+"voice_sample_error" = "Образец голосовой записи ошибок";
+
+/* Network Status */
+"network_connected" = "Подключенный";
+"network_disconnected" = "Отключен";
+"network_limited" = "Ограниченное соединение";
+"offline_mode" = "Автономный режим";
+"online_mode" = "Онлайн -режим";
