@@ -1,0 +1,204 @@
+/* General */
+"app_name" = "FactCheck Pro";
+"ok" = "OK";
+"cancel" = "Cancel";
+"done" = "Done";
+"save" = "Save";
+"delete" = "Delete";
+"edit" = "Edit";
+"back" = "Back";
+"next" = "Next";
+"continue" = "Continue";
+"retry" = "Retry";
+
+/* Main Interface */
+"start_listening" = "Start Listening";
+"stop_listening" = "Stop Listening";
+"ready_to_factcheck" = "Ready to fact-check";
+"listening" = "Listening...";
+"processing" = "Processing...";
+"fact_checking" = "Fact-checking...";
+
+/* Fact Check Results */
+"statement_true" = "True";
+"statement_false" = "False";
+"statement_mixed" = "Mixed";
+"statement_unknown" = "Unknown";
+"confidence" = "Confidence";
+"sources" = "Sources";
+"processing_time" = "Processing Time";
+"claim_type" = "Claim Type";
+
+/* Navigation */
+"tab_factcheck" = "Fact Check";
+"tab_history" = "History";
+"tab_statistics" = "Statistics";
+"tab_speakers" = "Speakers";
+"tab_settings" = "Settings";
+
+/* History */
+"history_title" = "History";
+"search_history" = "Search history...";
+"filter_results" = "Filter";
+"no_results" = "No results found";
+"clear_history" = "Clear History";
+"export_history" = "Export History";
+
+/* Statistics */
+"statistics_title" = "Statistics";
+"total_checks" = "Total Checks";
+"accuracy_rate" = "Accuracy Rate";
+"average_confidence" = "Average Confidence";
+"verification_rate" = "Verification Rate";
+"timeframe_today" = "Today";
+"timeframe_week" = "This Week";
+"timeframe_month" = "This Month";
+"timeframe_year" = "This Year";
+"timeframe_all" = "All Time";
+
+/* Speakers */
+"speakers_title" = "Speakers";
+"add_speaker" = "Add Speaker";
+"speaker_name" = "Speaker Name";
+"voice_sample" = "Voice Sample";
+"record_sample" = "Record Sample";
+"unknown_speaker" = "Unknown Speaker";
+
+/* Settings */
+"settings_title" = "Settings";
+"general" = "General";
+"theme" = "Theme";
+"theme_system" = "System";
+"theme_light" = "Light";
+"theme_dark" = "Dark";
+"haptic_feedback" = "Haptic Feedback";
+"notifications" = "Notifications";
+
+"factchecking" = "Fact Checking";
+"realtime_factchecking" = "Real-time Fact Checking";
+"confidence_threshold" = "Confidence Threshold";
+"source_verification" = "Source Verification";
+"max_sources" = "Max Sources per Check";
+
+"audio_speech" = "Audio & Speech";
+"speaker_identification" = "Speaker Identification";
+"audio_sensitivity" = "Audio Sensitivity";
+"language" = "Language";
+"continuous_listening" = "Continuous Listening";
+
+"privacy_security" = "Privacy & Security";
+"anonymous_analytics" = "Anonymous Analytics";
+"store_audio_locally" = "Store Audio Locally";
+"privacy_policy" = "Privacy Policy";
+"data_retention" = "Data Retention";
+
+"data_management" = "Data Management";
+"storage_used" = "Storage Used";
+"export_data" = "Export Data";
+"clear_cache" = "Clear Cache";
+"reset_all_data" = "Reset All Data";
+
+"about" = "About";
+"version" = "Version";
+"rate_app" = "Rate App";
+"contact_support" = "Contact Support";
+
+/* Onboarding */
+"onboarding_welcome_title" = "Real-time Fact Checking";
+"onboarding_welcome_description" = "Automatically verify statements as they're spoken using advanced AI and multiple reliable sources.";
+
+"onboarding_speakers_title" = "Speaker Identification";
+"onboarding_speakers_description" = "Identify different speakers and track their fact-checking history over time.";
+
+"onboarding_analytics_title" = "Detailed Analytics";
+"onboarding_analytics_description" = "View comprehensive statistics about accuracy rates, claim types, and verification trends.";
+
+"onboarding_privacy_title" = "Privacy First";
+"onboarding_privacy_description" = "Your data stays on your device. Audio processing is done locally whenever possible.";
+
+"get_started" = "Get Started";
+"permissions_required" = "Permissions Required";
+"permissions_description" = "FactCheck Pro needs these permissions to work properly";
+
+"microphone_access" = "Microphone Access";
+"microphone_description" = "Required to listen to and transcribe speech";
+"speech_recognition" = "Speech Recognition";
+"speech_recognition_description" = "Converts speech to text for fact-checking";
+"notifications_permission" = "Notifications";
+"notifications_description" = "Get alerts about fact-check results";
+
+"allow" = "Allow";
+"settings" = "Settings";
+
+/* Errors */
+"error_title" = "Error";
+"error_microphone_permission" = "Microphone permission is required for fact-checking";
+"error_speech_recognition" = "Speech recognition is not available";
+"error_network" = "Network connection required for fact-checking";
+"error_processing" = "Error processing statement";
+"error_no_statement" = "No statement detected";
+"error_statement_too_short" = "Statement too short to fact-check";
+"error_statement_too_long" = "Statement too long to process";
+
+/* Accessibility */
+"accessibility_start_listening" = "Start listening for speech to fact-check";
+"accessibility_stop_listening" = "Stop listening for speech";
+"accessibility_fact_result" = "Fact check result";
+"accessibility_confidence_level" = "Confidence level";
+"accessibility_source_count" = "Number of sources";
+"accessibility_speaker_identified" = "Speaker identified";
+
+/* Data Retention */
+"retention_1week" = "1 Week";
+"retention_1month" = "1 Month";
+"retention_3months" = "3 Months";
+"retention_6months" = "6 Months";
+"retention_1year" = "1 Year";
+"retention_forever" = "Forever";
+
+/* Languages */
+"language_english" = "English";
+"language_spanish" = "Spanish";
+"language_french" = "French";
+"language_german" = "German";
+"language_italian" = "Italian";
+"language_portuguese" = "Portuguese";
+"language_chinese" = "Chinese";
+"language_japanese" = "Japanese";
+
+/* Claim Types */
+"claim_factual" = "Factual";
+"claim_statistical" = "Statistical";
+"claim_quote" = "Quote";
+"claim_prediction" = "Prediction";
+"claim_opinion" = "Opinion";
+
+/* Export */
+"export_format" = "Export Format";
+"export_csv" = "CSV";
+"export_json" = "JSON";
+"export_pdf" = "PDF";
+"export_success" = "Data exported successfully";
+"export_error" = "Error exporting data";
+
+/* Alerts */
+"alert_clear_history_title" = "Clear History";
+"alert_clear_history_message" = "This will permanently delete all fact-check history. This action cannot be undone.";
+"alert_reset_data_title" = "Reset All Data";
+"alert_reset_data_message" = "This will permanently delete all fact-check history, speakers, and settings. This action cannot be undone.";
+"alert_delete_speaker_title" = "Delete Speaker";
+"alert_delete_speaker_message" = "Are you sure you want to delete this speaker profile?";
+
+/* Voice Samples */
+"record_voice_sample" = "Record Voice Sample";
+"recording_voice_sample" = "Recording...";
+"voice_sample_recorded" = "Voice sample recorded";
+"voice_sample_too_short" = "Voice sample too short. Please record for at least 3 seconds.";
+"voice_sample_error" = "Error recording voice sample";
+
+/* Network Status */
+"network_connected" = "Connected";
+"network_disconnected" = "Disconnected";
+"network_limited" = "Limited Connection";
+"offline_mode" = "Offline Mode";
+"online_mode" = "Online Mode";
