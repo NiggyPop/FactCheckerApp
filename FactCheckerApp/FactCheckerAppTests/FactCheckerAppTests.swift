@@ -1,8 +1,8 @@
 import XCTest
-@testable import FactCheckPro
+@testable import FactCheckerApp
 import Combine
 
-class FactCheckProTests: XCTestCase {
+class FactCheckerAppTests: XCTestCase {
     var coordinator: FactCheckCoordinator!
     var mockAudioService: MockAudioService!
     var mockFactCheckService: MockFactCheckService!

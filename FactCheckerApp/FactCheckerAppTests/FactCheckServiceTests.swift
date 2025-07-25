@@ -8,7 +8,7 @@
 
 import XCTest
 import Combine
-@testable import FactCheckPro
+@testable import FactCheckerApp
 
 class FactCheckServiceTests: XCTestCase {
     var factCheckService: FactCheckService!

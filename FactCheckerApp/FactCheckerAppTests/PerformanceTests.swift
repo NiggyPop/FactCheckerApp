@@ -7,7 +7,7 @@
 
 
 import XCTest
-@testable import FactCheckPro
+@testable import FactCheckerApp
 
 class PerformanceTests: XCTestCase {
     var coordinator: FactCheckCoordinator!

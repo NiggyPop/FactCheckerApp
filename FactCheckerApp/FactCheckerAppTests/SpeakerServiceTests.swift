@@ -7,7 +7,7 @@
 
 
 import XCTest
-@testable import FactCheckPro
+@testable import FactCheckerApp
 
 class SpeakerServiceTests: XCTestCase {
     var speakerService: SpeakerService!
