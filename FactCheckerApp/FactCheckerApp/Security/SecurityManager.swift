@@ -9,10 +9,62 @@
 import Foundation
 import LocalAuthentication
 import CryptoKit
-import KeychainAccess
+import Security
+
+struct KeychainWrapper {
+    let service: String
+
+    enum KeychainError: Error {
+        case status(OSStatus)
+    }
+
+    func set(_ data: Data, key: String) throws {
+        var query: [String: Any] = [
+            kSecClass as String: kSecClassGenericPassword,
+            kSecAttrService as String: service,
+            kSecAttrAccount as String: key
+        ]
+
+        SecItemDelete(query as CFDictionary)
+        query[kSecValueData as String] = data
+
+        let status = SecItemAdd(query as CFDictionary, nil)
+        guard status == errSecSuccess else { throw KeychainError.status(status) }
+    }
+
+    func getData(_ key: String) throws -> Data? {
+        let query: [String: Any] = [
+            kSecClass as String: kSecClassGenericPassword,
+            kSecAttrService as String: service,
+            kSecAttrAccount as String: key,
+            kSecReturnData as String: true,
+            kSecMatchLimit as String: kSecMatchLimitOne
+        ]
+
+        var result: AnyObject?
+        let status = SecItemCopyMatching(query as CFDictionary, &result)
+
+        if status == errSecItemNotFound { return nil }
+        guard status == errSecSuccess else { throw KeychainError.status(status) }
+        return result as? Data
+    }
+
+    func remove(_ key: String) throws {
+        let query: [String: Any] = [
+            kSecClass as String: kSecClassGenericPassword,
+            kSecAttrService as String: service,
+            kSecAttrAccount as String: key
+        ]
+
+        let status = SecItemDelete(query as CFDictionary)
+        guard status == errSecSuccess || status == errSecItemNotFound else {
+            throw KeychainError.status(status)
+        }
+    }
+}
 
 class SecurityManager: ObservableObject {
-    private let keychain = Keychain(service: AppConfig.bundleIdentifier)
+    private let keychain = KeychainWrapper(service: AppConfig.bundleIdentifier)
     private let encryptionKey = "FactCheckPro_Encryption_Key"
     
     @Published var isSecurityEnabled = false
@@ -81,10 +133,14 @@ class SecurityManager: ObservableObject {
     
     func disableSecurity() async throws {
         try await authenticateUser()
-        
+
         // Remove encryption key
-        try keychain.remove(encryptionKey)
-        
+        do {
+            try keychain.remove(encryptionKey)
+        } catch {
+            throw SecurityError.keychainError
+        }
+
         isSecurityEnabled = false
         UserDefaults.standard.set(false, forKey: "security_enabled")
     }
@@ -171,19 +227,31 @@ class SecurityManager: ObservableObject {
     
     func storeSecureData<T: Codable>(_ data: T, forKey key: String) throws {
         let encryptedData = try encryptData(data)
-        try keychain.set(encryptedData, key: key)
-    }
-    
-    func retrieveSecureData<T: Codable>(_ type: T.Type, forKey key: String) throws -> T? {
-        guard let encryptedData = try keychain.getData(key) else {
-            return nil
+        do {
+            try keychain.set(encryptedData, key: key)
+        } catch {
+            throw SecurityError.keychainError
         }
-        
+    }
+
+    func retrieveSecureData<T: Codable>(_ type: T.Type, forKey key: String) throws -> T? {
+        let encryptedData: Data
+        do {
+            guard let data = try keychain.getData(key) else { return nil }
+            encryptedData = data
+        } catch {
+            throw SecurityError.keychainError
+        }
+
         return try decryptData(encryptedData, type: type)
     }
-    
+
     func removeSecureData(forKey key: String) throws {
-        try keychain.remove(key)
+        do {
+            try keychain.remove(key)
+        } catch {
+            throw SecurityError.keychainError
+        }
     }
     
     // MARK: - Privacy Controls
@@ -264,12 +332,20 @@ class SecurityManager: ObservableObject {
     
     private func storeEncryptionKey(_ key: SymmetricKey) throws {
         let keyData = key.withUnsafeBytes { Data($0) }
-        try keychain.set(keyData, key: encryptionKey)
+        do {
+            try keychain.set(keyData, key: encryptionKey)
+        } catch {
+            throw SecurityError.keychainError
+        }
     }
-    
+
     private func getEncryptionKey() throws -> SymmetricKey? {
-        guard let keyData = try keychain.getData(encryptionKey) else {
-            return nil
+        let keyData: Data
+        do {
+            guard let data = try keychain.getData(encryptionKey) else { return nil }
+            keyData = data
+        } catch {
+            throw SecurityError.keychainError
         }
         return SymmetricKey(data: keyData)
     }
