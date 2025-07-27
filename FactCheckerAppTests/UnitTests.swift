@@ -1,0 +1,12 @@
+// End-to-end workflow testing
+RecordingWorkflowTests
+ExportWorkflowTests
+SyncWorkflowTests
+// Performance and memory testing
+AudioProcessingPerformanceTests
+LargeFileHandlingTests
+BackgroundProcessingTests
+// Core functionality testing
+AudioRecorderManagerTests
+AudioFileManagerTests
+TranscriptionManagerTests
