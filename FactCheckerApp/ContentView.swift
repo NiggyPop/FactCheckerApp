@@ -42,13 +42,21 @@ struct ContentView: View {
                 }
                 .tag(0)
             
+            // Document Investigation View
+            DocumentInvestigationView()
+                .tabItem {
+                    Image(systemName: "doc.text.magnifyingglass")
+                    Text("Investigate")
+                }
+                .tag(1)
+            
             // History View
             HistoryView(coordinator: coordinator)
                 .tabItem {
                     Image(systemName: "clock")
                     Text("History")
                 }
-                .tag(1)
+                .tag(2)
             
             // Speaker Management
             SpeakerManagementView(speakerService: speakerService)
@@ -56,7 +64,7 @@ struct ContentView: View {
                     Image(systemName: "person.2")
                     Text("Speakers")
                 }
-                .tag(2)
+                .tag(3)
             
             // Statistics View
             StatisticsView(coordinator: coordinator)
@@ -64,7 +72,7 @@ struct ContentView: View {
                     Image(systemName: "chart.bar")
                     Text("Stats")
                 }
-                .tag(3)
+                .tag(4)
             
             // Settings View
             SettingsView(settingsManager: settingsManager)
@@ -72,7 +80,7 @@ struct ContentView: View {
                     Image(systemName: "gear")
                     Text("Settings")
                 }
-                .tag(4)
+                .tag(5)
         }
         .accentColor(.blue)
         .onAppear {
